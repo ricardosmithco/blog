@@ -13,6 +13,11 @@ class PostList extends React.Component{
     }
 }
 
-export default connect(null, { fetchPosts: fetchPosts })(PostList);
+const mapStateToProps = (state) =>{
+    console.log(state);
+    return { posts: state.posts }
+}
+
+export default connect(mapStateToProps, { fetchPosts: fetchPosts })(PostList);
 // above, we put null because we don't have any mapToProps rn,
 // then our second argument is our action creator: fetchPost
