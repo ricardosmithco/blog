@@ -10,3 +10,5 @@ export default (state = [], action) => {
 
     }
 };
+
+// our postReducer is supposed to maintain a list of posts we retrieved from our api
