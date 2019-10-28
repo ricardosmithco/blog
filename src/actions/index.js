@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import jsonPlaceholder from '../apis/jsonPlaceholder';
 
 // how to create asynchronos action creators
@@ -14,4 +15,8 @@ export const fetchUser = (id) => async dispatch => {
     const response = await jsonPlaceholder.get(`/users/${id}`);
 
     dispatch({type: 'FETCH_USER', payload: response.data })
+};
+
+const _fetchUser = () =>{
+    
 };
