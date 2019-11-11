@@ -1,12 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchPosts } from '../actions/index';
+import { fetchPostsAndUsers } from '../actions/index';
 import UserHeader from './UserHeader';
+
 
 class PostList extends React.Component{ 
 
     componentDidMount(){ // executes the instant our component is rendered on screen
-        this.props.fetchPosts() // our action creator is called
+        this.props.fetchPostsAndUsers() // our action creator is called
         
     }
 
@@ -36,6 +37,6 @@ const mapStateToProps = (state) =>{ // mapStateToProps is used to get data from 
 } 
 
 
-export default connect(mapStateToProps, { fetchPosts: fetchPosts })(PostList);
+export default connect(mapStateToProps, { fetchPostsAndUsers: fetchPostsAndUsers })(PostList);
 // above, we put null because we don't have any mapToProps rn,
 // then our second argument is our action creator: fetchPost
